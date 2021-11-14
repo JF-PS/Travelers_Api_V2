@@ -4,7 +4,7 @@
   "private": true,
   "description": "Api_Allo_voyageur",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node ./bin/www"
   },
   "keywords": [],
   "author": "",

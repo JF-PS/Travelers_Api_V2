@@ -49,8 +49,4 @@ app.use('/geolocalisations', geolocalisationRoutes(express, geolocalisationsCont
 app.use('/annonces', annonceRoutes(express, annoncesController(annoncesRepository)));
 
 server.listen(port, () => console.log(`Server has started on : http://localhost:${port} `));
-// module.exports = app;
-
-// "scripts": {
-//   "start": "node ./bin/www"
-// },
+module.exports = app;
