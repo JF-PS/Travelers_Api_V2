@@ -48,11 +48,9 @@ app.use('/users', userRoutes(express, usersController(usersRepository)));
 app.use('/geolocalisations', geolocalisationRoutes(express, geolocalisationsController(geolocalisationsRepository)));
 app.use('/annonces', annonceRoutes(express, annoncesController(annoncesRepository)));
 
-server.listen(port, () => {
-  var desc = "Adresse du serveur: ";
-  var adresse = ` http://localhost:${port}`.green.bold;
-  console.log(`################################################################`.yellow.bold);
-  console.log(desc + adresse);
-  console.log(`################################################################`.yellow.bold);
-});
-module.exports = app;
+server.listen(port, () => console.log(`Server has started on : http://localhost:${port} `));
+// module.exports = app;
+
+// "scripts": {
+//   "start": "node ./bin/www"
+// },
