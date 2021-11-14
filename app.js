@@ -44,17 +44,6 @@ const usersRepository = new UsersRepository();
 const geolocalisationsRepository = new GeolocalisationsRepository();
 const annoncesRepository = new AnnoncesRepository();
 
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const path = require('path');
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-
 app.use('/users', userRoutes(express, usersController(usersRepository)));
 app.use('/geolocalisations', geolocalisationRoutes(express, geolocalisationsController(geolocalisationsRepository)));
 app.use('/annonces', annonceRoutes(express, annoncesController(annoncesRepository)));
